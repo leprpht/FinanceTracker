@@ -1,4 +1,6 @@
-﻿namespace FinanceTrackerLib
+﻿using System.Transactions;
+
+namespace FinanceTrackerLib
 {
     public class Transaction
     {
@@ -23,6 +25,10 @@
             _category = category;
             _type = type;
             _date = DateTime.Now;
+        }
+        public void PrintTransaction()
+        {
+            Console.WriteLine($"{Date} - {Type} - {Category} - {Amount}");
         }
     }
 }
